@@ -284,10 +284,9 @@ input[type="file"]::file-selector-button:active {
 
 /* Task header styling */
 .task-header {
-    display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 10px;
+    display: flex;
 }
 
 .task-description {
@@ -334,6 +333,8 @@ input[type="file"]::file-selector-button:active {
     display: flex;
     justify-content: space-between;
     font-size: 14px;
+    line-height: 100%;
+    align-items: baseline;
 }
 
 /* Right side: Assigned employee */
