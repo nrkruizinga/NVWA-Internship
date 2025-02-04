@@ -17,10 +17,11 @@
         <div class="user-info row justify-content-end" style="margin-right: 20px;">
             <div style="display:inline-flex;">
                 <div>
-                <bold>gebruiker 1</bold><br>
-                <span class="user-group">
-                    sector zaaizaden
-                </span></div>
+                    <bold>gebruiker 1</bold><br>
+                    <span class="user-group">
+                        sector zaaizaden
+                    </span>
+                </div>
                 <i class="fa fa-sign-out fa-2x  logout-icon"></i>
             </div>
         </div>
@@ -34,8 +35,8 @@
 
         <!-- Settings Column -->
         <div class="col-lg-2 mt-3 settings-column" name="settings-column">
-            <a href="/add_task" class="btn btn-light mb-3" style="width: 100%;"><i
-                    class="fa fa-plus-square"></i> Nieuwe taak</a>
+            <a href="./add_task.html" class="btn btn-light mb-3" style="width: 100%;"><i class="fa fa-plus-square"></i>
+                Nieuwe taak</a>
             <div class="filter-expansion">
                 <p><i class="fa fa-filter"></i> Filters</p>
                 <form method="get" class="mb-3">
@@ -52,15 +53,14 @@
                     <div class="row" style="width: 100%; margin-left: 0px; margin-top: 5px;">
                         <button type="submit" class="col-8 btn btn-primary"
                             style="border: solid 1px #4a4a4a;">Filter</button>
-                        <a href="" class="btn btn-light col-4"
-                            style="border: 1px #4a4a4a solid;">
+                        <a href="" class="btn btn-light col-4" style="border: 1px #4a4a4a solid;">
                             <i class="fa fa-times" style="color: #D9534F;"></i>
                         </a>
                     </div>
                 </form>
             </div>
             <br>
-            <a href="/archive" class="btn btn-light mb-3" style="width: 100%;"><i class="fa fa-history"></i>
+            <a href="./archive.html" class="btn btn-light mb-3" style="width: 100%;"><i class="fa fa-history"></i>
                 Archief</a>
             <br>
             <div class="popup btn btn-light mb-3" style="width: 100%;"><i class="fa fa-flag"></i>
@@ -76,7 +76,7 @@
         <div class="col-lg-3 mt-3 task-column" name="expertise-column">
             <h3 style="text-align: center; color: white;">Expertise</h3>
             <div class="list-group">
-                <a href="/view_task" class="task" id="{{ task.id }}">
+                <a href="./view_task.html" class="task" id="{{ task.id }}">
                     <div class="task-header">
                         <p style="align-self: start;">
                             GE<br>
@@ -102,7 +102,7 @@
         <div class="col-lg-3 mt-3 task-column" name="contentbeheer-column">
             <h3 style="text-align: center; color: white;">Contentbeheer</h3>
             <div class="list-group">
-                <a href="/view_task" class="task" id="{{ task.id }}">
+                <a href="./view_task.html" class="task" id="{{ task.id }}">
                     <div class="task-header">
                         <p style="align-self: start;">
                             GB<br>
@@ -127,7 +127,7 @@
         <div class="col-lg-3 mt-3 task-column" name="notificeren-column">
             <h3 style="text-align: center; color: white;">Gereed voor DPD</h3>
             <div class="list-group">
-                
+
                 <li class="list-group-item">Geen taken</li>
             </div>
         </div>
