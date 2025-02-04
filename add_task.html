@@ -9,95 +9,98 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+<main>
 
-<body style="background-color: #f2f2f2;">
-    <header class="header" style="padding-top: 0px; padding-bottom: 0px;">
-        <img src="nvwa_logo.svg" alt="NVWA logo">
-        <h1 class="text-center">Kanban bord verwerking importeisen</h1>
-        <div class="user-info row justify-content-end" style="margin-right: 20px;">
-            <div style="display:inline-flex;">
-                <div>
-                    <bold>gebruiker 1</bold><br>
-                    <span class="user-group">sector zaaizaden</span>
+    <body style="background-color: #f2f2f2;">
+        <header class="header" style="padding-top: 0px; padding-bottom: 0px;">
+            <img src="nvwa_logo.svg" alt="NVWA logo">
+            <h1 class="text-center">Kanban bord verwerking importeisen</h1>
+            <div class="user-info row justify-content-end" style="margin-right: 20px;">
+                <div style="display:inline-flex;">
+                    <div>
+                        <bold>gebruiker 1</bold><br>
+                        <span class="user-group">sector zaaizaden</span>
+                    </div>
+                    <i class="fa fa-sign-out fa-2x logout-icon" role="none"></i>
                 </div>
-                <i class="fa fa-sign-out fa-2x logout-icon"></i>
             </div>
+        </header>
+
+        <div class="container mt-4 task-form">
+            <form enctype="multipart/form-data">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2 class="mb-4" style="color:#01689b">Informatie</h2>
+                        <a href="#opslaan" id="skip" class="btn btn-light mb-3" style="width: 30%;"><i
+                                class="fa fa-fast-forward" role="none"></i> Skip naar taken</a>
+                        <div class="form-group">
+                            <label for="description"><strong>Omschrijving:</strong></label>
+                            <input type="text" id="description" class="form-control w-100" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label for="country">Land:</label>
+                            <input type="text" id="country" class="form-control w-50">
+                        </div>
+                        <div class="form-group">
+                            <label for="sector">Sector:</label>
+                            <select id="sector" class="form-control w-50 rounded-pill">
+                                <option value=""></option>
+                                <option value="">Zaaizaden</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="status">Status:</label>
+                            <select id="status" class="form-control w-50 rounded-pill">
+                                <option value="">Te doen</option>
+                                <option value="">Mee bezig</option>
+                                <option value="">In afwachting</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="priority">Prioriteit:</label>
+                            <select id="priority" class="form-control w-50 rounded-pill">
+                                <option value="">Laag</option>
+                                <option value="" selected>Gemiddeld</option>
+                                <option value="">Hoog</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="assigned_employee">Medewerker:</label>
+                            <select id="assigned_employee" class="form-control w-50 rounded-pill">
+                                <option value=""></option>
+                                <option value="">Gebruiker 1</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h2 class="mb-4" style="color:#01689b">Aanvullende informatie</h2>
+                        <div class="form-group">
+                            <label for="source">Bron:</label>
+                            <textarea id="source" class="form-control w-50" rows="1"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="coverages">Dekkingscode(s):</label>
+                            <textarea id="coverages" class="form-control w-50" rows="1"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="notes">Notities:</label>
+                            <textarea id="content" class="form-control w-100" rows="5" name="notes"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="addfile">Bestand:</label>
+                            <input type="file" id="file" class="w-100" name="addfile">
+                        </div>
+                    </div>
+                </div>
+                <a href="./" class="btn btn-primary mt-3" id="opslaan" type="submit"><i class="fa fa-check-circle-o"
+                        role="none"></i> Opslaan & naar overzicht</a>
+                <a href="./" class="btn btn-light mt-3"
+                    style="border: 2px #01689b solid; color: #01689b; background-color: white;">
+                    <i class="fa fa-times-circle-o" role="none"></i> Annuleren
+                </a>
+            </form>
         </div>
-    </header>
-
-    <div class="container mt-4 task-form">
-        <form enctype="multipart/form-data">
-            <div class="row">
-                <div class="col-md-6">
-                    <h3 class="mb-4" style="color:#01689b">Informatie</h3>
-                    <div class="form-group">
-                        <label for="description">Omschrijving:</label>
-                        <input type="text" id="description" class="form-control w-100"
-                            placeholder="Korte beschrijving van de taak.">
-                    </div>
-                    <div class="form-group">
-                        <label for="country">Land:</label>
-                        <input type="text" id="country" class="form-control w-50">
-                    </div>
-                    <div class="form-group">
-                        <label for="sector">Sector:</label>
-                        <select id="sector" class="form-control w-50 rounded-pill">
-                            <option value=""></option>
-                            <option value="">Zaaizaden</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="status">Status:</label>
-                        <select id="status" class="form-control w-50 rounded-pill">
-                            <option value="">Te doen</option>
-                            <option value="">Mee bezig</option>
-                            <option value="">In afwachting</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="priority">Prioriteit:</label>
-                        <select id="priority" class="form-control w-50 rounded-pill">
-                            <option value="">Laag</option>
-                            <option value="" selected>Gemiddeld</option>
-                            <option value="">Hoog</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="assigned_employee">Medewerker:</label>
-                        <select id="assigned_employee" class="form-control w-50 rounded-pill">
-                            <option value=""></option>
-                            <option value="">Gebruiker 1</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="source">Bron:</label>
-                        <textarea id="source" class="form-control w-50" rows="1"
-                            placeholder="URL, bestandlocatie of elders"></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="coverages">Dekkingscode(s):</label>
-                        <textarea id="coverages" class="form-control w-50" rows="1" placeholder="Code(s)"></textarea>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <h3 class="mb-3" style="color:#01689b">Notities</h3>
-                    <div class="form-group">
-                        <textarea id="content" class="form-control w-100" rows="5"
-                            placeholder="Voeg uw opmerking hier toe..."></textarea>
-                    </div>
-                    <h3 class="mb-3" style="color:#01689b">Bestand toevoegen</h3>
-                    <div class="form-group">
-                        <input type="file" id="file" class="w-100">
-                    </div>
-                </div>
-            </div>
-            <a href="./" class="btn btn-primary mt-3"><i class="fa fa-check-circle-o"></i> Opslaan & naar overzicht</a>
-            <a href="./" class="btn btn-light mt-3"
-                style="border: 2px #01689b solid; color: #01689b; background-color: white;">
-                <i class="fa fa-times-circle-o"></i> Annuleren
-            </a>
-        </form>
-    </div>
-</body>
+    </body>
+</main>
 
 </html>
