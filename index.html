@@ -22,7 +22,7 @@
                         sector zaaizaden
                     </span>
                 </div>
-                <i class="fa fa-sign-out fa-2x  logout-icon"></i>
+                <i class="fa fa-sign-out fa-2x  logout-icon" role="none"></i>
             </div>
         </div>
     </header>
@@ -31,109 +31,116 @@
 </html>
 
 <div class="container" style="max-width: 100%; padding-bottom: 20px; padding-left: 30px; padding-right: 30px;">
-    <div class="row gx-5">
+    <div class="row gx-5" style="width: 100%; display:flex;">
 
         <!-- Settings Column -->
-        <div class="col-lg-2 mt-3 settings-column" name="settings-column">
-            <a href="./add_task.html" class="btn btn-light mb-3" style="width: 100%;"><i class="fa fa-plus-square"></i>
-                Nieuwe taak</a>
-            <div class="filter-expansion">
-                <p><i class="fa fa-filter"></i> Filters</p>
-                <form method="get" class="mb-3">
-                    <input type="hidden" name="my_tasks" value="true">
-                    <button type="submit" class="btn btn-light w-100" style="border: 1px black solid;">Toon alleen mijn
-                        taken</button>
-                </form>
-                <!-- Form for Sector Filtering -->
-                <form method="get" class="form-inline mb-3">
-                    <select name="sector" id="sector" class="form-control mb-2"
-                        style="border: 1px black solid; width: 100%;">
-                        <option value="">Alle sectoren</option>
-                    </select>
-                    <div class="row" style="width: 100%; margin-left: 0px; margin-top: 5px;">
-                        <button type="submit" class="col-8 btn btn-primary"
-                            style="border: solid 1px #4a4a4a;">Filter</button>
-                        <a href="" class="btn btn-light col-4" style="border: 1px #4a4a4a solid;">
-                            <i class="fa fa-times" style="color: #D9534F;"></i>
-                        </a>
-                    </div>
-                </form>
+        <aside style="width: 20%; float:left;">
+            <div class="col-lg-11 mt-3 settings-column" style="width: 100%;" name="settings-column">
+                <a href="#first-card" id="skip" class="btn btn-light mb-3" style="width: 100%;"><i
+                        class="fa fa-fast-forward" role="none"></i> Skip naar taken</a>
+                <a href="./add_task.html" role="button" class="btn btn-light mb-3" style="width: 100%;"><i
+                        class="fa fa-plus-square" role="none"></i>
+                    Nieuwe taak</a>
+                <div class="filter-expansion">
+                    <p><i class="fa fa-filter" role="none"></i> Filters</p>
+                    <form method="get" class="mb-2">
+                        <input type="checkbox" name="my_tasks" value="true">
+                        <label for="my_tasks"> Toon alleen mijn taken</label>
+                    </form>
+                    <!-- Form for Sector Filtering -->
+                    <form method="get" class="form-inline mb-3">
+                        <label for="sector"> Kies een sector:</label>
+                        <select name="sector" id="sector" class="form-control mb-2"
+                            style="border: 1px black solid; width: 100%;">
+                            <option value="">Alle sectoren</option>
+                        </select>
+                        <div class="row" id="filterbutton">
+                            <button type="submit" class="btn-primary"
+                                style="border: solid 1px #01689b; width: 100%;">Filter
+                                toepassen</button>
+                            <button type="submit" class="btn-secundary"
+                                style="border: solid 1px #4a4a4a; width: 100%;"><i class="fa fa-times" role="none"
+                                    style="color: #D9534F;"></i> Filter wissen</button>
+                        </div>
+                    </form>
+                </div>
+                <br>
+                <a href="./archive.html" role="button" class="btn btn-light mb-3" style="width: 100%;"><i
+                        class="fa fa-history" role="none"></i> Archief</a>
+                <br>
+                <a href="" role="button" class="btn btn-light mb-3" style="width: 100%;"><i class="fa fa-flag"
+                        role="none"></i>
+                    Rondleiding</a>
+                <br>
+                <a href="" role="button" class="btn btn-light mb-3" style="width: 100%;"><i class="fa fa-gear"
+                        role="none"></i>
+                    Instellingen</a>
+                <br>
             </div>
-            <br>
-            <a href="./archive.html" class="btn btn-light mb-3" style="width: 100%;"><i class="fa fa-history"></i>
-                Archief</a>
-            <br>
-            <div class="popup btn btn-light mb-3" style="width: 100%;"><i class="fa fa-flag"></i>
-                Rondleiding
-                <span class="popuptext" id="myPopup">In ontwikkeling</span>
+        </aside>
+        <main style="width: 80%; display:flex; float:right;">
+            <!-- Expertise Column -->
+            <div class="col mt-3 task-column" name="expertise-column">
+                <h2 style="text-align: center; color: white;">Expertise</h2>
+                <div class="list-group">
+                    <a href="./view_task.html" class="task" id="first-card">
+                        <div class="task-header">
+                            <p style="align-self: start;">
+                                GE<br>
+                                <span class="task-description">wijziging code X</span>
+                            </p>
+                            <p class="task-priority-status">
+                                <span class="task-priority-status-blocks prio"><i class="fa fa-flag task-priority-Hoog"
+                                        role="none"></i></span>
+                                <span class="task-priority-status-blocks">Mee bezig</span>
+                            </p>
+                        </div>
+                        <hr class="task-separator">
+                        <div class="task-details">
+                            <p>Sector groente en fruit</p>
+                            <p class="task-assigned">
+                            </p>
+                        </div>
+                    </a>
+                </div>
             </div>
-            <br>
-            <a href="" class="btn btn-light mb-3" style="width: 100%;"><i class="fa fa-gear"></i> Instellingen</a>
-            <br>
-        </div>
 
-        <!-- Expertise Column -->
-        <div class="col-lg-3 mt-3 task-column" name="expertise-column">
-            <h3 style="text-align: center; color: white;">Expertise</h3>
-            <div class="list-group">
-                <a href="./view_task.html" class="task" id="{{ task.id }}">
-                    <div class="task-header">
-                        <p style="align-self: start;">
-                            GE<br>
-                            <span class="task-description">wijziging code X</span>
-                        </p>
-                        <p class="task-priority-status">
-                            <span class="task-priority-status-blocks prio"><i
-                                    class="fa fa-flag task-priority-Hoog"></i></span>
-                            <span class="task-priority-status-blocks">Mee bezig</span>
-                        </p>
-                    </div>
-                    <hr class="task-separator">
-                    <div class="task-details">
-                        <p>Sector groente en fruit</p>
-                        <p class="task-assigned">
-                        </p>
-                    </div>
-                </a>
+            <!-- Contentbeheer Column -->
+            <div class="col mt-3 task-column" name="contentbeheer-column">
+                <h2 style="text-align: center; color: white;">Contentbeheer</h2>
+                <div class="list-group">
+                    <a href="./view_task.html" class="task" id="{{ task.id }}">
+                        <div class="task-header">
+                            <p style="align-self: start;">
+                                GB<br>
+                                <span class="task-description">wijziging diverse items VK</span>
+                            </p>
+                            <p class="task-priority-status">
+                                <span class="task-priority-status-blocks prio"><i
+                                        class="fa fa-flag task-priority-Gemiddeld" role="none"></i></span>
+                                <span class="task-priority-status-blocks">Te doen</span>
+                            </p>
+                        </div>
+                        <hr class="task-separator">
+                        <div class="task-details">
+                            <p>Sector sierteelt</p>
+                            <p><i class="fa fa-user-circle" role="none"></i> gebruiker 1</p>
+                        </div>
+                    </a>
+                </div>
             </div>
-        </div>
 
-        <!-- Contentbeheer Column -->
-        <div class="col-lg-3 mt-3 task-column" name="contentbeheer-column">
-            <h3 style="text-align: center; color: white;">Contentbeheer</h3>
-            <div class="list-group">
-                <a href="./view_task.html" class="task" id="{{ task.id }}">
-                    <div class="task-header">
-                        <p style="align-self: start;">
-                            GB<br>
-                            <span class="task-description">wijziging diverse items VK</span>
-                        </p>
-                        <p class="task-priority-status">
-                            <span class="task-priority-status-blocks prio"><i
-                                    class="fa fa-flag task-priority-Gemiddeld"></i></span>
-                            <span class="task-priority-status-blocks">Te doen</span>
-                        </p>
-                    </div>
-                    <hr class="task-separator">
-                    <div class="task-details">
-                        <p>Sector sierteelt</p>
-                        <p><i class="fa fa-user-circle"></i> gebruiker 1</p>
-                    </div>
-                </a>
+            <!-- Notificeren Column -->
+            <div class="col mt-3 task-column" name="notificeren-column">
+                <h2 style="text-align: center; color: white;">Gereed voor DPD</h2>
+                <div class="list-group">
+
+                    <li class="list-group-item">Geen taken</li>
+                </div>
             </div>
-        </div>
-
-        <!-- Notificeren Column -->
-        <div class="col-lg-3 mt-3 task-column" name="notificeren-column">
-            <h3 style="text-align: center; color: white;">Gereed voor DPD</h3>
-            <div class="list-group">
-
-                <li class="list-group-item">Geen taken</li>
-            </div>
-        </div>
+        </main>
     </div>
 </div>
-
 <script>
     function popUp() {
         var popup = document.getElementById("myPopup");

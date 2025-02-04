@@ -9,6 +9,20 @@
     box-shadow: 0 4px 2px -2px gray;
 }
 
+#skip {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+#skip:focus {
+    position: static;
+    height: auto;
+}
+
 .user-info {
     display: flex;
     align-items: center;
@@ -20,7 +34,7 @@
 }
 
 .user-group {
-    font-size: 0.6em;
+    font-size: clamp(12px, 0.6em, 2rem); 
     padding: 0px;
 }
 
@@ -28,10 +42,6 @@
     margin-left: 12px;
     text-decoration: none;
     color: #000;
-}
-
-.logout-icon:hover {
-    color: grey;
 }
 
 .btn-secondary {
@@ -47,7 +57,7 @@
     color: white;
 }
 
-.settings-column{
+.settings-column {
     background-color: #01689b;
     border-radius: 30px;
     padding-top: 30px;
@@ -55,7 +65,7 @@
     margin-right: 50px;
 }
 
-.task-column{
+.task-column {
     background-color: #01689b;
     border-radius: 30px;
     padding-top: 30px;
@@ -63,7 +73,7 @@
     margin-left: 1%;
 }
 
-.archive-column{
+.archive-column {
     background-color: #fff;
     border: 2px #01689b solid;
     border-radius: 30px;
@@ -72,12 +82,22 @@
     margin-left: 30px;
 }
 
-.filter-expansion{
+.filter-expansion {
     background-color: white;
     border: 1px black solid;
     padding: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
+}
+
+#filterbutton {
+    width: 100%;
+    margin-left: 0px !important;
+}
+
+#filterbutton button {
+    margin-top: 10px;
+    height: calc(1.5em + .75rem + 2px);
 }
 
 .btn {
@@ -95,11 +115,12 @@
     padding: 10px;
     margin-bottom: 15px;
 }
+
 .comment strong {
     color: #01689b;
 }
 
-.task-form{
+.task-form {
     background-color: #fff;
     border: 2px #01689b solid;
     border-radius: 30px;
@@ -116,10 +137,10 @@
     position: relative;
     display: inline-block;
     cursor: pointer;
-  }
-  
-  /* The actual popup (appears on top) */
-  .popup .popuptext {
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
     visibility: hidden;
     width: 160px;
     background-color: green;
@@ -132,10 +153,10 @@
     bottom: 125%;
     left: 50%;
     margin-left: -80px;
-  }
-  
-  /* Popup arrow */
-  .popup .popuptext::after {
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
     content: "";
     position: absolute;
     top: 100%;
@@ -144,89 +165,102 @@
     border-width: 5px;
     border-style: solid;
     border-color: green transparent transparent transparent;
-  }
-  
-  /* Toggle this class when clicking on the popup container (hide and show the popup) */
-  .popup .show {
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
     visibility: visible;
     -webkit-animation: fadeIn 1s;
     animation: fadeIn 1s
-  }
-  
-  /* Add animation (fade in the popup) */
-  @-webkit-keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
-  }
-  
-  @keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity:1 ;}
-  }
+}
 
-  input[type="file"] {
-  position: relative;
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+input[type="file"] {
+    position: relative;
 }
 
 input[type="file"]::file-selector-button {
-  width: 185px;
-  color: transparent;
+    width: 185px;
+    color: transparent;
 }
 
 /* Faked label styles and icon */
 input[type="file"]::before {
-  position: absolute;
-  pointer-events: none;
-  top: 13px;
-  left: 16px;
-  height: 20px;
-  width: 20px;
-  content: "";
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230964B0'%3E%3Cpath d='M18 15v3H6v-3H4v3c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-3h-2zM7 9l1.41 1.41L11 7.83V16h2V7.83l2.59 2.58L17 9l-5-5-5 5z'/%3E%3C/svg%3E");
+    position: absolute;
+    pointer-events: none;
+    top: 13px;
+    left: 16px;
+    height: 20px;
+    width: 20px;
+    content: "";
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230964B0'%3E%3Cpath d='M18 15v3H6v-3H4v3c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-3h-2zM7 9l1.41 1.41L11 7.83V16h2V7.83l2.59 2.58L17 9l-5-5-5 5z'/%3E%3C/svg%3E");
 }
 
 input[type="file"]::after {
-  position: absolute;
-  pointer-events: none;
-  top: 11px;
-  left: 40px;
-  color: #0964b0;
-  content: "Selecteer bestand";
+    position: absolute;
+    pointer-events: none;
+    top: 11px;
+    left: 40px;
+    color: #0964b0;
+    content: "Selecteer bestand";
 }
 
 /* ------- From Step 1 ------- */
 
 /* file upload button */
 input[type="file"]::file-selector-button {
-  border-radius: 4px;
-  padding: 0 16px;
-  height: 40px;
-  cursor: pointer;
-  background-color: white;
-  border: 1px solid rgba(0, 0, 0, 0.16);
-  box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.05);
-  margin-right: 16px;
-  transition: background-color 200ms;
+    border-radius: 4px;
+    padding: 0 16px;
+    height: 40px;
+    cursor: pointer;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.16);
+    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.05);
+    margin-right: 16px;
+    transition: background-color 200ms;
 }
 
 /* file upload button hover state */
 input[type="file"]::file-selector-button:hover {
-  background-color: #f3f4f6;
+    background-color: #f3f4f6;
 }
 
 /* file upload button active state */
 input[type="file"]::file-selector-button:active {
-  background-color: #e5e7eb;
+    background-color: #e5e7eb;
 }
 
 .task-details-label {
     font-weight: 600;
-    width: 150px; /* Adjust as necessary for label width */
+    width: 150px;
+    /* Adjust as necessary for label width */
     display: inline-block;
 }
+
 .task-details-value {
     display: inline-block;
-    margin-left: 20px; /* Adjust this for desired indentation */
+    margin-left: 20px;
+    /* Adjust this for desired indentation */
 }
 
 .task-table {
@@ -234,7 +268,8 @@ input[type="file"]::file-selector-button:active {
     border-collapse: collapse;
 }
 
-.task-table th, .task-table td {
+.task-table th,
+.task-table td {
     padding: 10px;
     border: 1px solid #ddd;
     text-align: left;
@@ -308,7 +343,7 @@ input[type="file"]::file-selector-button:active {
 }
 
 .task-priority-Gemiddeld {
-    color: orange; 
+    color: orange;
 }
 
 .task-priority-Laag {
@@ -342,6 +377,8 @@ input[type="file"]::file-selector-button:active {
     text-align: right;
 }
 
-.btn-primary{
+.btn-primary {
     background-color: #01689b !important;
+    color: white !important;
+    border-color: #01689b !important;
 }
