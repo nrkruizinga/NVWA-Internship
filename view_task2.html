@@ -22,7 +22,7 @@
                         sector zaaizaden
                     </span>
                 </div>
-                <i class="fa fa-sign-out fa-2x  logout-icon"></i>
+                <i class="fa fa-sign-out fa-2x  logout-icon" role="none"></i>
             </div>
         </div>
     </header>
@@ -31,10 +31,27 @@
 </html>
 
 <div class="row mb-3" style="width: 100%;">
-    <div class="col-8 archive-column mt-3" style="margin-right: 0px;">
-        <h3 style="color: #01689b;">Informatie</h3>
-        <p><strong>IVI opnemen in landeneisen</strong></p>
+    <main class="col-8 archive-column mt-3" style="margin-right: 0px;">
+        <h2 style="color: #01689b;">Informatie</h2><br>
+        <p>
+            <span class="task-details-label">Omschrijving:</span>
+            <span class="task-details-value">IVI opnemen in landeneisen</span>
+        </p>
         <div class="row">
+            <div class="col-6">
+                <p>
+                    <span class="task-details-label">Land (+regio):</span>
+                    <span class="task-details-value">MA</span>
+                </p>
+                <p>
+                    <span class="task-details-label">Sector:</span>
+                    <span class="task-details-value">Sierteelt</span>
+                </p>
+                <p>
+                    <span class="task-details-label">Aangemaakt op:</span>
+                    <span class="task-details-value">8 januari 2025</span>
+                </p>
+            </div>
             <div class="col-6">
                 <p>
                     <span class="task-details-label">Status:</span>
@@ -43,26 +60,20 @@
                     </span>
                 </p>
                 <p>
-                    <span class="task-details-label">Prioriteit:</span>
-                    <span class="task-details-value">Gemiddeld <i
-                            class="fa fa-flag task-priority-Gemiddeld"></i></span>
-                </p>
-                <p>
-                    <span class="task-details-label">Sector:</span>
-                    <span class="task-details-value">Sierteelt</span>
-                </p>
-                <p>
                     <span class="task-details-label">Medewerker(s):</span>
                     <span class="task-details-value">
                         Gebruiker 1
                     </span>
                 </p>
-            </div>
-            <div class="col-6">
                 <p>
-                    <span class="task-details-label">Land (+regio):</span>
-                    <span class="task-details-value">MA</span>
+                    <span class="task-details-label">Gearchiveerd op:</span>
+                    <span class="task-details-value">12 januari 2025</span>
                 </p>
+            </div>
+        </div>
+        <h2 class="mt-3" style="color: #01689b;">Aanvullende informatie</h2><br>
+        <div class="row">
+            <div class="mb-3 col-6">
                 <p>
                     <span class="task-details-label">Bron:</span>
                     <span class="task-details-value"></span>
@@ -72,51 +83,35 @@
                     <span class="task-details-value">123456</span>
                 </p>
                 <p>
+                    <span class="task-details-label">Notities:</span>
+                    <span class="task-details-value"><i>Geen notities</i></span>
+                </p>
+                <p>
                     <span class="task-details-label">Bestand:</span>
-                    <span class="task-details-value">
-                        Geen document gevonden.
-                    </span>
-                </p>
-            </div>
-        </div>
-        <h3 class="mt-3" style="color: #01689b;">Notities</h3>
-        <div class="row">
-            <div class="mb-3 col-6">
-                <p>Geen notities.</p>
-            </div>
-            <div class="mb-3 col-6">
-                <p>
-                    <span class="task-details-label">Aangemaakt op:</span>
-                    <span class="task-details-value">8 januari 2025</span>
-                </p>
-                <p>
-                    <span class="task-details-label">Gearchiveerd op:</span>
-                    <span class="task-details-value">12 januari 2025</span>
+                    <span class="task-details-value"><i>Geen document toegevoegd</i></span>
                 </p>
             </div>
         </div>
 
         <hr style="border-top: 3px dashed #01689b;">
-        <h3 style="color: #01689b;">Opmerkingen</h3>
+        <a href="#terug" id="skip" class="btn btn-light mb-3" style="width: 30%;"><i class="fa fa-fast-forward"
+                role="none"></i> Skip opmerkingen</a>
+        <h2 style="color: #01689b;">Opmerkingen</h2>
         <div class="comments-section mt-4">
-            <p class="text-muted">Geen opmerkingen tot nu toe</p>
+            <p><i>Geen opmerkingen</i></p>
         </div>
 
-    </div>
-    <div class="col-3 mt-3 settings-column" name="settings-column"
+    </main>
+    <aside class="col-3 mt-3 settings-column" name="settings-column"
         style="margin-right: 0px !important; margin-left: 30px;">
-        <a href="./" class="btn btn-light mb-3" style="width: 100%;"><i
-                class="fa fa-arrow-left"></i> Terug naar hoofdscherm</a>
-        <a href="./archive.html" class="btn btn-light mb-3" style="width: 100%;"><i class="fa fa-arrow-left"></i>
-            Terug naar archief<i class="fa fa-history" style="margin-left:10px"></i></a>
-        <form style="display:inline;">
-            <button class="btn btn-light mb-3" style="width: 100%;"><i class="fa fa-repeat"></i>
-                Herstellen</button>
-        </form>
-        <form style="display:inline;">
-            <a href="./" class="btn btn-danger mb-3"
-                style="width: 100%; background-color: #d9534f !important;"><i class="fa fa-trash"></i>
-                Verwijderen</a>
-        </form>
-    </div>
+        <a href="./" class="btn btn-light mb-3" style="width: 100%;" id="terug"><i class="fa fa-arrow-left"
+                role="none"></i> Terug naar hoofdscherm</a>
+        <a href="./archive.html" class="btn btn-light mb-3" style="width: 100%;"><i class="fa fa-arrow-left"
+                role="none"></i> Terug naar archief<i class="fa fa-history" role="none"
+                style="margin-left:10px"></i></a>
+        <a href="./index.html" class="btn btn-light mb-3" style="width: 100%;"><i class="fa fa-repeat" role="none"></i>
+            Herstellen</a>
+        <button class="btn mb-3" id="dangerbutton" style="width: 100%; background-color: #9b1a01; color:white;"><i class="fa fa-trash"
+                role="none"></i> Verwijderen</button>
+    </aside>
 </div>

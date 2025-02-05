@@ -378,3 +378,7 @@ input[type="file"]::file-selector-button:active {
     color: white !important;
     border-color: #01689b !important;
 }
+
+#dangerbutton:hover {
+    background-color: #b31f04 !important;
+}

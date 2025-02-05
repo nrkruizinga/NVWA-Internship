@@ -22,7 +22,7 @@
                         sector zaaizaden
                     </span>
                 </div>
-                <i class="fa fa-sign-out fa-2x  logout-icon"></i>
+                <i class="fa fa-sign-out fa-2x  logout-icon" role="none"></i>
             </div>
         </div>
     </header>
@@ -31,10 +31,27 @@
 </html>
 
 <div class="row mb-3" style="width: 100%;">
-    <div class="col-8 archive-column mt-3" style="margin-right: 0px;">
-        <h3 style="color: #01689b;">Informatie</h3>
-        <p><strong>wijziging code X</strong></p>
+    <main class="col-8 archive-column mt-3" style="margin-right: 0px;">
+        <h2 style="color: #01689b;">Informatie</h2><br>
+        <p>
+            <span class="task-details-label">Omschrijving:</span>
+            <span class="task-details-value">wijziging code X</span>
+        </p>
         <div class="row">
+            <div class="col-6">
+                <p>
+                    <span class="task-details-label">Land (+regio):</span>
+                    <span class="task-details-value">GE</span>
+                </p>
+                <p>
+                    <span class="task-details-label">Sector:</span>
+                    <span class="task-details-value">Groente en fruit</span>
+                </p>
+                <p>
+                    <span class="task-details-label">Aangemaakt op:</span>
+                    <span class="task-details-value">18 december 2024</span>
+                </p>
+            </div>
             <div class="col-6">
                 <p>
                     <span class="task-details-label">Status:</span>
@@ -43,25 +60,20 @@
                     </span>
                 </p>
                 <p>
-                    <span class="task-details-label">Prioriteit:</span>
-                    <span class="task-details-value">Hoog <i
-                            class="fa fa-flag task-priority-Hoog"></i></span>
-                </p>
-                <p>
-                    <span class="task-details-label">Sector:</span>
-                    <span class="task-details-value">Groente en fruit</span>
-                </p>
-                <p>
                     <span class="task-details-label">Medewerker(s):</span>
                     <span class="task-details-value">
                     </span>
                 </p>
-            </div>
-            <div class="col-6">
                 <p>
-                    <span class="task-details-label">Land (+regio):</span>
-                    <span class="task-details-value">GE</span>
+                    <span class="task-details-label">Prioriteit:</span>
+                    <span class="task-details-value">Hoog <i class="fa fa-flag task-priority-Hoog"
+                            role="none"></i></span>
                 </p>
+            </div>
+        </div>
+        <h2 class="mt-3" style="color: #01689b;">Aanvullende informatie</h2><br>
+        <div class="row">
+            <div class="mb-3 col-6">
                 <p>
                     <span class="task-details-label">Bron:</span>
                     <span class="task-details-value"></span>
@@ -71,60 +83,57 @@
                     <span class="task-details-value"></span>
                 </p>
                 <p>
-                    <span class="task-details-label">Bestand:</span>
-                    <span class="task-details-value">
-                        Geen document gevonden.
-                    </span>
+                    <span class="task-details-label">Notities:</span>
+                    <span class="task-details-value"><i>Geen notities</i></span>
                 </p>
-            </div>
-        </div>
-        <h3 class="mt-3" style="color: #01689b;">Notities</h3>
-        <div class="row">
-            <div class="mb-3 col-6">
-                <p>Geen notities.</p>
-            </div>
-            <div class="mb-3 col-6">
                 <p>
-                    <span class="task-details-label">Datum aangemaakt:</span>
-                    <span class="task-details-value">18 december 2024</span>
+                    <span class="task-details-label">Bestand:</span>
+                    <span class="task-details-value"><i>Geen document toegevoegd</i></span>
                 </p>
             </div>
         </div>
 
         <hr style="border-top: 3px dashed #01689b;">
-        <h3 style="color: #01689b;">Opmerkingen</h3>
+        <a href="#terug" id="skip" class="btn btn-light mb-3" style="width: 30%;"><i class="fa fa-fast-forward"
+                role="none"></i> Skip opmerkingen</a>
+        <h2 style="color: #01689b;">Opmerkingen</h2><br>
         <form class="mb-3">
             <div class="form-group">
-                <textarea id="notes" class="form-control w-50" rows="3"
-                    placeholder="Voeg uw opmerking hier toe..."></textarea>
+                <label for="notes">Voeg hier uw opmerking toe:</label>
+                <textarea id="notes" class="form-control w-50" rows="3"></textarea>
             </div>
             <button name="comment-submit" class="btn btn-primary">Plaatsen</button>
         </form>
         <div class="comments-section mt-4">
-            <div class="comment mb-3 p-3 border rounded">
+            <div class="comment mb-3 p-3 border rounded" tabindex="0">
                 <p class="mb-1">
-                    <i class="fa fa-user-circle-o" style="color: #01689b;"></i>
+                    <i class="fa fa-user-circle-o" role="none" style="color: #01689b;"></i>
                     <strong>Gebruiker 2</strong>
                     <small class="text-muted">19 december 2024</small>
                 </p>
                 <p class="mb-0">De bron mist nog</p>
             </div>
         </div>
+        <a href="#notes" id="skip" class="btn btn-light mb-3" style="width: 30%;"><i class="fa fa-fast-backward"
+                role="none"></i> Terug naar opmerking schrijven</a>
 
-    </div>
-    <div class="col-3 mt-3 settings-column" name="settings-column"
+    </main>
+    <aside class="col-3 mt-3 settings-column" name="settings-column"
         style="margin-right: 0px !important; margin-left: 30px;">
-        <a href="./" class="btn btn-light mb-3" style="width: 100%;"><i
-                class="fa fa-arrow-left"></i> Terug naar hoofdscherm</a>
-        <a href="./add_task.html" class="btn btn-light mb-3" style="width: 100%;"><i
-                class="fa fa-pencil"></i> Kaart bewerken</a>
-        <a href="./" class="btn btn-light mb-3" style="width: 100%;"
-            name="move-to-expertise"><i class="fa fa-toggle-left"></i> Verplaats
+        <a href="./" class="btn btn-light mb-3" style="width: 100%;" id="terug"><i class="fa fa-arrow-left"
+                role="none"></i> Terug naar
+            hoofdscherm</a>
+        <a href="./add_task.html" class="btn btn-light mb-3" style="width: 100%;"><i class="fa fa-pencil"
+                role="none"></i> Kaart
+            bewerken</a>
+        <a href="./" class="btn btn-light mb-3" style="width: 100%;" name="move-to-expertise"><i
+                class="fa fa-toggle-left" role="none"></i> Verplaats
             naar Expertise</a>
-        <a href="./" class="btn btn-light mb-3" style="width: 100%;"
-            name="move-to-notificeren"><i class="fa fa-toggle-right"></i> Verplaats naar
+        <a href="./" class="btn btn-light mb-3" style="width: 100%;" name="move-to-notificeren"><i
+                class="fa fa-toggle-right" role="none"></i> Verplaats naar
             Gereed voor DPD</a>
-        <a href="./archive.html" class="btn btn-light mb-3" style="width: 100%;"><i
-                class="fa fa-archive"></i> Archiveren</a>
-    </div>
+        <a href="./archive.html" class="btn btn-light mb-3" style="width: 100%;"><i class="fa fa-archive"
+                role="none"></i>
+            Archiveren</a>
+    </aside>
 </div>
