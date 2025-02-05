@@ -22,40 +22,53 @@
                         sector zaaizaden
                     </span>
                 </div>
-                <i class="fa fa-sign-out fa-2x  logout-icon"></i>
+                <i class="fa fa-sign-out fa-2x  logout-icon" role="none"></i>
             </div>
         </div>
     </header>
+    <div class="row" style="width:100%">
+        <main class="col-8 archive-column mt-3" style="margin-right: 0px;">
+            <h2 style="color: #01689b;">Archief</h2>
+            <a href="#terug" id="skip" class="btn btn-light mb-3" style="width: 30%;"><i class="fa fa-fast-forward"
+                    role="none"></i> Skip naar terugknop</a>
+            <table class="task-table mt-3">
+                <thead>
+                    <tr>
+                        <th>Omschrijving</th>
+                        <th>Land</th>
+                        <th>Sector</th>
+                        <th>Gearchiveerd op</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr tabindex="0" data-href="./view_task2.html">
+                        <td style="max-width: 200px;">IVI opnemen in landeneisen</td>
+                        <td>MA</td>
+                        <td>Sierteelt</td>
+                        <td>12 januari 2025</td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+        <aside class="col-3 mt-3 settings-column" name="settings-column" style="margin-right: 0px !important; margin-left: 30px;">
+            <a href="./" class="btn btn-light mb-3" style="width: 100%;" id="terug">
+                <i class="fa fa-arrow-left" role="none"></i> Terug naar Hoofdscherm
+            </a>
+        </aside>
+    </div>
+    <script>
+        document.querySelectorAll("tr[data-href]").forEach(row => {
+            row.addEventListener("click", () => {
+                window.location.href = row.dataset.href;
+            });
+
+            row.addEventListener("keydown", (event) => {
+                if (event.key === "Enter") {
+                    window.location.href = row.dataset.href;
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
-
-<div class="row" style="width: 95%;">
-    <div class="col-8 archive-column mt-3" style="margin-right: 0px;">
-        <h2 style="color: #01689b;">Archief</h2>
-        <table class="task-table mt-3">
-            <thead>
-                <tr>
-                    <th>Omschrijving</th>
-                    <th>Land</th>
-                    <th>Sector</th>
-                    <th>Gearchiveerd op</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr onclick="window.location.href='view_task2.html'">
-                    <td style="max-width: 200px;">IVI opnemen in landeneisen</td>
-                    <td>MA</td>
-                    <td>Sierteelt</td>
-                    <td>12 januari 2025</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <div class="col-3 mt-3 settings-column" name="settings-column"
-        style="margin-right: 0px !important; margin-left: 30px;">
-        <a href="./" class="btn btn-light mb-3" style="width: 100%;">
-            <i class="fa fa-arrow-left"></i> Terug naar Hoofdscherm
-        </a>
-    </div>
-</div>

@@ -293,10 +293,6 @@ input[type="file"]::file-selector-button:active {
     color: inherit;
 }
 
-
-
-
-
 /* General styling for task cards */
 .task {
     display: block;
