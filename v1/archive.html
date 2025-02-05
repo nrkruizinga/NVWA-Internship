@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban Bord</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body style="background-color: #f2f2f2;">
+    <header class="header" style="padding-top: 0px; padding-bottom: 0px;">
+        <img src="nvwa_logo.svg" alt="NVWA logo">
+        <h1 style="text-align: center;">Kanban bord verwerking importeisen</h1>
+        <div class="user-info row justify-content-end" style="margin-right: 20px;">
+            <div style="display:inline-flex;">
+                <div>
+                    <bold>gebruiker 1</bold><br>
+                    <span class="user-group">
+                        sector zaaizaden
+                    </span>
+                </div>
+                <i class="fa fa-sign-out fa-2x  logout-icon"></i>
+            </div>
+        </div>
+    </header>
+</body>
+
+</html>
+
+<div class="row" style="width: 95%;">
+    <div class="col-8 archive-column mt-3" style="margin-right: 0px;">
+        <h2 style="color: #01689b;">Archief</h2>
+        <table class="task-table mt-3">
+            <thead>
+                <tr>
+                    <th>Omschrijving</th>
+                    <th>Land</th>
+                    <th>Sector</th>
+                    <th>Gearchiveerd op</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr onclick="window.location.href='view_task2.html'">
+                    <td style="max-width: 200px;">IVI opnemen in landeneisen</td>
+                    <td>MA</td>
+                    <td>Sierteelt</td>
+                    <td>12 januari 2025</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-3 mt-3 settings-column" name="settings-column"
+        style="margin-right: 0px !important; margin-left: 30px;">
+        <a href="./" class="btn btn-light mb-3" style="width: 100%;">
+            <i class="fa fa-arrow-left"></i> Terug naar Hoofdscherm
+        </a>
+    </div>
+</div>

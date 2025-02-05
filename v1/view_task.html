@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban Bord</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body style="background-color: #f2f2f2;">
+    <header class="header" style="padding-top: 0px; padding-bottom: 0px;">
+        <img src="nvwa_logo.svg" alt="NVWA logo">
+        <h1 style="text-align: center;">Kanban bord verwerking importeisen</h1>
+        <div class="user-info row justify-content-end" style="margin-right: 20px;">
+            <div style="display:inline-flex;">
+                <div>
+                    <bold>gebruiker 1</bold><br>
+                    <span class="user-group">
+                        sector zaaizaden
+                    </span>
+                </div>
+                <i class="fa fa-sign-out fa-2x  logout-icon"></i>
+            </div>
+        </div>
+    </header>
+</body>
+
+</html>
+
+<div class="row mb-3" style="width: 100%;">
+    <div class="col-8 archive-column mt-3" style="margin-right: 0px;">
+        <h3 style="color: #01689b;">Informatie</h3>
+        <p><strong>wijziging code X</strong></p>
+        <div class="row">
+            <div class="col-6">
+                <p>
+                    <span class="task-details-label">Status:</span>
+                    <span class="task-details-value">
+                        Mee bezig
+                    </span>
+                </p>
+                <p>
+                    <span class="task-details-label">Prioriteit:</span>
+                    <span class="task-details-value">Hoog <i
+                            class="fa fa-flag task-priority-Hoog"></i></span>
+                </p>
+                <p>
+                    <span class="task-details-label">Sector:</span>
+                    <span class="task-details-value">Groente en fruit</span>
+                </p>
+                <p>
+                    <span class="task-details-label">Medewerker(s):</span>
+                    <span class="task-details-value">
+                    </span>
+                </p>
+            </div>
+            <div class="col-6">
+                <p>
+                    <span class="task-details-label">Land (+regio):</span>
+                    <span class="task-details-value">GE</span>
+                </p>
+                <p>
+                    <span class="task-details-label">Bron:</span>
+                    <span class="task-details-value"></span>
+                </p>
+                <p>
+                    <span class="task-details-label">Dekkingscode(s):</span>
+                    <span class="task-details-value"></span>
+                </p>
+                <p>
+                    <span class="task-details-label">Bestand:</span>
+                    <span class="task-details-value">
+                        Geen document gevonden.
+                    </span>
+                </p>
+            </div>
+        </div>
+        <h3 class="mt-3" style="color: #01689b;">Notities</h3>
+        <div class="row">
+            <div class="mb-3 col-6">
+                <p>Geen notities.</p>
+            </div>
+            <div class="mb-3 col-6">
+                <p>
+                    <span class="task-details-label">Datum aangemaakt:</span>
+                    <span class="task-details-value">18 december 2024</span>
+                </p>
+            </div>
+        </div>
+
+        <hr style="border-top: 3px dashed #01689b;">
+        <h3 style="color: #01689b;">Opmerkingen</h3>
+        <form class="mb-3">
+            <div class="form-group">
+                <textarea id="notes" class="form-control w-50" rows="3"
+                    placeholder="Voeg uw opmerking hier toe..."></textarea>
+            </div>
+            <button name="comment-submit" class="btn btn-primary">Plaatsen</button>
+        </form>
+        <div class="comments-section mt-4">
+            <div class="comment mb-3 p-3 border rounded">
+                <p class="mb-1">
+                    <i class="fa fa-user-circle-o" style="color: #01689b;"></i>
+                    <strong>Gebruiker 2</strong>
+                    <small class="text-muted">19 december 2024</small>
+                </p>
+                <p class="mb-0">De bron mist nog</p>
+            </div>
+        </div>
+
+    </div>
+    <div class="col-3 mt-3 settings-column" name="settings-column"
+        style="margin-right: 0px !important; margin-left: 30px;">
+        <a href="./" class="btn btn-light mb-3" style="width: 100%;"><i
+                class="fa fa-arrow-left"></i> Terug naar hoofdscherm</a>
+        <a href="./add_task.html" class="btn btn-light mb-3" style="width: 100%;"><i
+                class="fa fa-pencil"></i> Kaart bewerken</a>
+        <a href="./" class="btn btn-light mb-3" style="width: 100%;"
+            name="move-to-expertise"><i class="fa fa-toggle-left"></i> Verplaats
+            naar Expertise</a>
+        <a href="./" class="btn btn-light mb-3" style="width: 100%;"
+            name="move-to-notificeren"><i class="fa fa-toggle-right"></i> Verplaats naar
+            Gereed voor DPD</a>
+        <a href="./archive.html" class="btn btn-light mb-3" style="width: 100%;"><i
+                class="fa fa-archive"></i> Archiveren</a>
+    </div>
+</div>
