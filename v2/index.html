@@ -17,9 +17,9 @@
         <div class="user-info row justify-content-end" style="margin-right: 20px;">
             <div style="display:inline-flex;">
                 <div>
-                    <bold>gebruiker 1</bold><br>
+                    <bold>Gebruiker 1</bold><br>
                     <span class="user-group">
-                        sector zaaizaden
+                        Sector zaaizaden
                     </span>
                 </div>
                 <i class="fa fa-sign-out fa-2x  logout-icon" role="none"></i>
@@ -45,12 +45,19 @@
                     <p><i class="fa fa-filter" role="none"></i> Filters</p>
                     <form method="get" class="mb-2">
                         <input type="checkbox" name="my_tasks" value="true">
-                        <label for="my_tasks"> Toon alleen mijn taken</label>
+                        <label for="my_tasks" style="display:inline"> Toon alleen mijn taken</label>
                         <!-- Form for Sector Filtering -->
-                        <label for="sector"> Kies een sector:</label>
+                        <label for="sector" style="margin-top:15px; display:block;"> Kies een sector:</label>
                         <select name="sector" id="sector" class="form-control mb-2"
                             style="border: 1px black solid; width: 100%;">
                             <option value="">Alle sectoren</option>
+                            <option value="">Aardappelen</option>
+                            <option value="">Bloembollen</option>
+                            <option value="">Diverse producten</option>
+                            <option value="">Groente en fruit</option>
+                            <option value="">Plantuien</option>
+                            <option value="">Sierteelt</option>
+                            <option value="">Zaaizaden</option>
                         </select>
                         <div class="row" id="filterbutton">
                             <button type="submit" class="btn-primary"

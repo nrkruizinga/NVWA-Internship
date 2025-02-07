@@ -34,7 +34,7 @@
 }
 
 .user-group {
-    font-size: clamp(12px, 0.6em, 2rem); 
+    font-size: clamp(12px, 0.6em, 2rem);
     padding: 0px;
 }
 
@@ -193,6 +193,11 @@
     to {
         opacity: 1;
     }
+}
+
+select,
+input[type="checkbox"] {
+    cursor: pointer;
 }
 
 input[type="file"] {
@@ -381,4 +386,14 @@ input[type="file"]::file-selector-button:active {
 
 #dangerbutton:hover {
     background-color: #b31f04 !important;
+}
+
+#dangerbutton:focus {
+    background-color: #b31f04 !important;
+}
+
+#dangerbutton {
+    width: 100%;
+    background-color: #9b1a01 !important;
+    border: none;
 }
